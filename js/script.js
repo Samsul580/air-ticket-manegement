@@ -39,4 +39,8 @@ function priceAdd() {
     const economyInputNumber = parseInt(economyInput.value);
     const subtotal = firstInputNumber * 150 + economyInputNumber * 100;
     document.getElementById("subtotal").innerText = subtotal;
+    const tax = subtotal / 100 * 10;
+    document.getElementById("tax").innerText = tax;
+    const total = subtotal + tax;
+    document.getElementById("total").innerText = total;
 }
