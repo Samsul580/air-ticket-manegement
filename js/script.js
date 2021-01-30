@@ -19,7 +19,7 @@ economyMinusBtn.addEventListener("click", function () {
     priceAdd();
 })
  
-// ticket count and select function
+// ticket count handler
 function inputCounter(isIncrease, id) {
     const Input = document.getElementById(id);
     const InputNumber = parseInt(Input.value);
@@ -32,6 +32,8 @@ function inputCounter(isIncrease, id) {
     }
     Input.value = totalInputNumber;
 }
+
+// price add handler
 function priceAdd() {
     const firstInput = document.getElementById("first-input");
     const firstInputNumber = parseInt(firstInput.value);
@@ -44,3 +46,14 @@ function priceAdd() {
     const total = subtotal + tax;
     document.getElementById("total").innerText = total;
 }
+
+// booking button handler
+const bookNowBtn = document.getElementById("book-now-btn");
+bookNowBtn.addEventListener("click", function () {
+    const bookingInfo = document.getElementById("booking-info");
+    bookingInfo.style.display = "none";
+    const bookingResult = document.getElementById("booking-result");
+    bookingResult.style.display = "block";
+    const total = document.getElementById("total").innerText;
+    document.getElementById("pay-amount").innerText = total;
+})
