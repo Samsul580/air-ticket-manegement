@@ -18,7 +18,7 @@ economyMinusBtn.addEventListener("click", function () {
     inputCounter(false, "economy-input");
     priceAdd();
 })
- 
+
 // ticket count handler
 function inputCounter(isIncrease, id) {
     const Input = document.getElementById(id);
