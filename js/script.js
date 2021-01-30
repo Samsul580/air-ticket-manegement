@@ -2,25 +2,21 @@ const firstPlusBtn = document.getElementById("first-plus-btn");
 firstPlusBtn.addEventListener("click", function () {
     inputCounter(true, "first-input");
     totalPriceAdd();
-    ticketPriceAdd(true);
 })
 const firstMinusBtn = document.getElementById("first-minus-btn");
 firstMinusBtn.addEventListener("click", function () {
     inputCounter(false, "first-input");
     totalPriceAdd();
-    ticketPriceAdd(true);
 })
 const economyPlusBtn = document.getElementById("economy-plus-btn");
 economyPlusBtn.addEventListener("click", function () {
     inputCounter(true, "economy-input");
     totalPriceAdd();
-    ticketPriceAdd(false);
 })
 const economyMinusBtn = document.getElementById("economy-minus-btn");
 economyMinusBtn.addEventListener("click", function () {
     inputCounter(false, "economy-input");
     totalPriceAdd();
-    ticketPriceAdd(false);
 })
 
 // ticket count handler
@@ -35,18 +31,6 @@ function inputCounter(isIncrease, id) {
         totalInputNumber = InputNumber - 1;
     }
     Input.value = totalInputNumber;
-}
-function ticketPriceAdd(isFirst) {
-    if (isFirst == true) {
-        const Input = document.getElementById("first-input");
-        const InputNumber = parseInt(Input.value);
-        document.getElementById("first-price").innerText = InputNumber * 150;
-    }
-    if (isFirst == false) {
-        const Input = document.getElementById("economy-input");
-        const InputNumber = parseInt(Input.value);
-        document.getElementById("economy-price").innerText = InputNumber * 100;
-    }
 }
 
 // price add handler
